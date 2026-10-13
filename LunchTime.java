@@ -34,6 +34,10 @@ public class LunchTime {
      */
     public LunchTime() {
         // TODO: Initialize all four instance variables.
+        numNugs = 6;
+        mysterySauce = 30.0;
+        enoughNugs = false;
+        entreeName = "Chicken Surpise";
     }
 
 
@@ -42,6 +46,10 @@ public class LunchTime {
      */
     public LunchTime(int nugs, double sauce, boolean enough, String name) {
         // TODO: Set all four instance variables using the parameters.
+        numNugs = nugs;
+        mysterySauce = sauce;
+        enoughNugs = enough; 
+        entreeName = name;
     }
 
 
@@ -59,7 +67,7 @@ public class LunchTime {
      */
     public int getEntreeNameLength() {
         // TODO
-        return 0;
+        return entreeName.length();
     }
 
 
@@ -79,7 +87,7 @@ public class LunchTime {
      */
     public String getEntreeSubstring(int start, int end) {
         // TODO
-        return "";
+        return entreeName.substring(start, end);
     }
 
 
@@ -127,7 +135,7 @@ public class LunchTime {
      */
     public boolean isSameLunch(String otherLunch) {
         // TODO
-        return false;
+        return entreeName.equals(otherLunch);
     }
 
 
@@ -289,7 +297,7 @@ public class LunchTime {
 
         // TODO:
         // Create a LunchTime object using the no-argument constructor.
-
+        LunchTime lunchA = new LunchTime();
 
         // TODO:
         // Create another LunchTime object using the constructor
@@ -297,13 +305,13 @@ public class LunchTime {
         //
         // Feel free to invent an appropriately terrible cafeteria
         // entree name.
-
+        LunchTime lunchB = new LunchTime(10, 45.0, true, "Chicken  4 me");
 
         // TODO:
         // Call EVERY non-challenge method at least once.
         //
         // Print the results so you can verify that your methods work.
-
+        System.out.println("length: " + lunchB.getEntreeNameLength());
 
         // OPTIONAL:
         // Attempt the four challenges if you are feeling powerful.
